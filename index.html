@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+<style>
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<body style="text-align: center;">
+
+    <h1>Simple Calculator</h1>
+    Number1:<input type="number" id="Number1" placeholder="Enter the First Number">
+    <br><br>
+    Number2:<input type="number" id="Number2" placeholder="Enter the Second Number">
+    <br><br>
+    <button onclick="mymulfunction()">Multiplication</button>
+    <br>
+    <br>
+    <button onclick="mydivfunction()">Diviion</button>
+    <br>
+    <script>
+         function mymulfunction() {
+            let Number1 = document.getElementById("Number1").value;
+            let Number2 = document.getElementById("Number2").value;
+            let mulresult = Number(Number1) * Number(Number2);
+            console.log("Multiplication_result ", mulresult)
+            document.getElementById("M").innerHTML = mulresult
+        }
+        function mydivfunction() {
+            let Number1 = document.getElementById("Number1").value;
+            let Number2 = document.getElementById("Number2").value;
+            let divresult = Number(Number1) / Number(Number2);
+            console.log("Division_result ", divresult);
+            document.getElementById("D").innerHTML = divresult
+        }
+    </script>
+     <p id  = "M"></p>
+     <p id = "D"></p>
+</body>
+</html>
